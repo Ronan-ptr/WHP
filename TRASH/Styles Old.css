@@ -1,0 +1,253 @@
+/* PAGE [CSS] Contient tout les styles graphiques */
+
+/* REGLAGES PAR DEFAUT */
+    :root {
+        /* Couleurs perso */
+        --c0 : #2a4aa0;
+        --c1 : #8390b6;
+        --c2 : #00113f;
+        --c3 : #2a4aa0;
+        --c4 : #2a4aa0;
+        /* Couleurs */
+        --blue : #007bff;
+        --indigo : #6610f2;
+        --purple : #6f42c1;
+        --pink : #e83e8c;
+        --red : #dc3545;
+        --orange : #fd7e14;
+        --yellow : #ffc107;
+        --green : #28a745;
+        --teal : #20c997;
+        --cyan : #17a2b8;
+        --white : #fff;
+        --gray : #6c757d;
+        --gray-dark : #343a40;
+        --primary : #007bff;
+        --secondary : #6c757d;
+        --success : #28a745;
+        --info : #17a2b8;
+        --warning : #ffc107;
+        --danger : #dc3545;
+        --light : #f8f9fa;
+        --dark : #343a40;
+        --black : #000000;
+        /* Marge ? */
+        --breakpoint-xs : 0;
+        --breakpoint-sm : 576px;
+        --breakpoint-md : 768px;
+        --breakpoint-lg : 992px;
+        --breakpoint-xl : 1200px;
+        /* Fonts */
+        --font-family: Verdana, Geneva, Tahoma, sans-serif;
+        --font-family-sans-serif : "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        --font-family-monospace : SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+*, ::after, ::before {
+	box-sizing : border-box;
+}
+html {
+	font-family : sans-serif;
+	line-height : 1.15;
+	-webkit-text-size-adjust : 100%;
+	-webkit-tap-highlight-color : transparent;
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+	display : block;
+}
+
+
+
+
+/* TEXTES */
+
+    /* TITRES */
+        h1, h2, h3 {
+            color: #2a4aa0;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+     /* PARAGRAPHES */
+        p {
+            color: var(--black);
+            text-align: justify;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+ 
+   
+        
+
+
+/* BODY */
+
+    /* BODY */
+        body {
+            /* Taille */
+            min-height: 800px;
+            display: flex;
+            margin: ;
+            margin-top: 50px;
+            
+            /* Affichage */
+            border: solid var(--black);
+            background-color: var(--white);
+            
+            /* Position boites */
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+    /* DIV TYPES */
+        .DIV_A {
+            width: 100%;
+            background-color:var(--light);
+            align-items: center;
+        }
+
+    /* DIV TABLEAUX */
+    .DIV_TAB {
+       display: flex; 
+    }
+
+    /* DIV FORMULAIRES */
+    form {
+        width: 100%;
+        border:;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* DIV IMAGES */
+    .DIV_IMG {
+        max-width: 100px;
+            height: auto; 
+            margin: 0 auto;
+            display: block;
+            display: flex;
+    }
+
+/* NAV BARS */
+
+    /* ALL NAV */
+
+        /* NAV links */
+        .NAV_top a, .NAV_side.active a {
+            color: var(--white); /* Texte blanc */
+            font-weight: bold; /* Texte en gras */
+            text-decoration: none; /* Supprimer le soulignement des liens */
+            padding: 10px; /* Espacement autour du texte */   
+        }
+
+    /* NAV_top */
+
+        /* Attributs */
+        .NAV_top {
+            /* Taille */
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            /* Annimation */
+
+            /* Style */
+            background-color:var(--c0);
+            font-style: var(--white);
+            justify-content: space-between;
+        }
+
+    /* NAV_side */
+
+        /* Attributs */
+        .NAV_side {
+
+            /* Taille */
+            position: fixed;
+            left: -250px;
+            top: 0;
+            height: 100%;
+
+            /* Annimation */
+            transition: left 0.3s ease-in-out;
+
+            /* Style */
+            background-color:var(--c0);
+            font-style: var(--white);
+            justify-content: space-between;
+        }
+     
+        /* Actions */
+        .NAV_side.active {
+            left: 0; /* Change valeur Left à 0 quand Active */
+        }
+
+
+
+
+
+
+
+
+/* IMAGES */
+
+     /* Image Tableaux*/
+        #ID_img_ico {
+            max-width: 100px;
+            height: auto; 
+            margin: 0 auto;
+            display: block;
+            display: flex;
+    }
+
+    /* Image Tableaux*/
+        #ID_img_ico {
+            max-width: 100px;
+            height: auto; 
+            margin: 0 auto;
+            display: block;
+            display: flex;
+        }
+
+    /* Image Bienvenue*/
+        #ID_img_bienvenue {
+            max-width: 500px;
+            height: auto; 
+            margin: 0 auto;
+            display: block;
+            display: flex;
+        }
+
+/* TABLEAUX */
+
+    /* TAB*/
+        table {
+            border-collapse: collapse;
+            position: fixed;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .thead {
+        background-color: var(--c1);
+        }
+
+
+
+
+/* TABLEAUX */
+
+        . {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+
+        }

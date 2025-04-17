@@ -1,0 +1,50 @@
+<!DOCTYPE html> <!-- type page pour navigateur web -->
+
+<html> <!-- Début lecture -->
+
+<head> <!-- Infos hides -->
+
+    <title>Nouveux pays</title> <!-- URL titre -->
+
+    <!-- LISTES DES FICHIERS LIEES -->
+
+    <link rel="stylesheet" href="/var/www/html/WHPStyles.css"> <!-- Stylessheet = feuille contenant les styles -->
+    
+</head>
+
+<body> <!-- Partie visible de la page -->
+
+    <div class="DIV_form"> <!-- FORMULAIRE -->
+
+        <h1>NOUVEAU PAYS</h1> <!-- Titre Formulaire -->
+    
+        <form> <!-- Début Formulaire -->
+
+            <!-- NOM PAYS -->
+            <label for="ID_Nom">Nom :</label> <!-- associe liblélé & champ de saisie -->
+            <input type="text" id="ID_nom" name="nom"> <!-- Crée champ de saisie -->
+            <br>
+
+            <!-- CODE ISO-A3 -->
+            <label for="ID_ISO">Code ISO-A3 :</label> <!--  -->
+            <input type="text" id="ID_ISO" name="ISO"> <!-- "name" = clef associer à la valeur saisie -->
+            <br>
+
+            <!-- DNS Web -->
+            <label for="ID_Web">DNS Web :</label> <!--  -->
+            <input type="text" id="ID_Web" name="Web"> <!--  -->
+            <br>
+
+            <!-- DRAPEAUX -->
+            <label for="ID_Flag">Drapeau :</label> <!--  -->
+            <input type="file" id="ID_Flag" name="Flag"> <!-- type:"File" = Quels types fichier ? -->
+            <br>
+
+            <!-- BOUTON ENVOIE -->
+            <label for="ID_Submit">Ajouter à la base de donné :</label> <!--  -->
+            <input type="submit" value="Send"> <!-- "value" = Texte afficher dans bouton -->
+
+        </form>
+    </div>
+</body>
+</html>
