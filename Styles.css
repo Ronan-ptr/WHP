@@ -149,7 +149,7 @@
         max-width: 100px;
 
     }
-    .IMG_Flg { /* EMBLEME PAYS */
+    .IMG_Flg { /* DRAPEAU PAYS */
         max-width: 100%;
         max-height: 100px;
     }
@@ -175,8 +175,6 @@
         
     }
 
-
-
 /* TABLEAUX */
 
     /* TAB*/
@@ -198,7 +196,7 @@
         padding: 15px;
         
     }
-
+    
     .DIV_TAB {
         display: flex; 
     }
@@ -334,6 +332,7 @@
         color: var(--white);
         letter-spacing: -.5px; 
     }
+
 
     .LIST {
         flex-direction: column;

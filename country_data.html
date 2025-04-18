@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<header></header>
+    <title>Country Data</title>
+    <link rel="stylesheet" href="Styles.css">
+</header>
+<body>
+     <!-- DIV FORMULAIRE 📜 -->
+     <div class="DIV_FRM">
+
+        <h1>NOUVEAU PAYS</h1> <!-- Titre Formulaire -->
+    
+        <form action="js/country_data.js" method="post"> <!-- Début Formulaire -->
+
+            <!-- CODE ISO-A3 -->
+            <label for="ID_ISO">Code ISO-A3 :</label> <!--  -->
+            <input type="text" id="ID_ISO" name="iso"> <!-- "name" = clef associer à la valeur saisie -->
+            <br>
+            
+            <!-- NOM PAYS -->
+            <label for="ID_Nom">Nom :</label> <!-- associe liblélé & champ de saisie -->
+            <input type="text" id="ID_nom" name="nom"> <!-- Crée champ de saisie -->
+            <br>
+
+            <!-- DNS Web -->
+            <label for="ID_Web">DNS Web :</label> <!--  -->
+            <input type="text" id="ID_Web" name="web"> <!--  -->
+            <br>
+
+            <!-- DRAPEAUX -->
+            <label for="ID_Flag">Drapeau :</label> <!--  -->
+            <input type="file" id="ID_Flag" name="flg"> <!-- type:"File" = Quels types fichier ? -->
+            <br>
+
+            <!-- BOUTON ENVOIE -->
+            <label for="ID_Submit">Ajouter à la base de donné :</label> <!--  -->
+            <input type="submit" value="Send"> <!-- "value" = Texte afficher dans bouton -->
+        
+        </form>
+    </div>
+
+    <!-- TABLEAU 📜 -->
+    <table>
+        <thead class="TAB_head_1">
+
+            <tr>
+                <th>ISO</th>
+                <th>Flag</th>
+                <th>Name</th>
+                <th>web</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+            <td>GBR</td>
+            <td><img src="Res/GBR_Flag.png" alt="GBR Flag" class="IMG_Flg"></td>
+            <td>United Kingdom</td>
+            <td>.uk</td>
+            </tr>
+
+        </tbody> 
+    </table>
+
+    <script src="js/country_data.js"></script>
+
+</body>
+

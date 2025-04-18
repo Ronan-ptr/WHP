@@ -1,0 +1,47 @@
+<form class="country-form" id="editCountryForm">
+    <!-- Section Identité -->
+    <div class="form-section">
+        <h2>Identité</h2>
+        <div class="form-group">
+            <label for="nom">Nom du pays</label>
+            <input type="text" id="nom" name="nom" required>
+        </div>
+        <div class="form-group">
+            <label for="capitale">Capitale</label>
+            <input type="text" id="capitale" name="capitale" required>
+        </div>
+        <div class="form-group">
+            <label for="chef">Chef d'État</label>
+            <input type="text" id="chef" name="chef">
+        </div>
+        <div class="form-group">
+            <label for="devise">Devise nationale</label>
+            <input type="text" id="devise" name="devise">
+        </div>
+    </div>
+
+    <!-- Section Médias -->
+    <div class="form-section">
+        <h2>Médias</h2>
+        <div class="media-upload">
+            <label for="drapeau">Drapeau</label>
+            <input type="file" id="drapeau" name="drapeau" accept="image/*">
+            <img id="drapeauPreview" class="preview-image" src="" alt="">
+        </div>
+        <div class="media-upload">
+            <label for="armoiries">Armoiries</label>
+            <input type="file" id="armoiries" name="armoiries" accept="image/*">
+            <img id="armoiriesPreview" class="preview-image" src="" alt="">
+        </div>
+        <div class="media-upload">
+            <label for="hymne">Hymne national</label>
+            <input type="file" id="hymne" name="hymne" accept="audio/*">
+            <audio id="hymnePreview" controls></audio>
+        </div>
+    </div>
+
+    <button type="submit" id="sublitbutton">Sauvegarder les modifications</button>
+</form>
+<!-- ACTION JS -->
+<script src="js/country_form.js"></script>  <!-- Nouveau lien JavaScript -->
+<script src="js/country_data.js"></script>  <!-- Nouveau lien JavaScript -->
