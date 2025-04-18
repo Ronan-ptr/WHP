@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Liste des pays</title>
+  <link rel="stylesheet" href="Styles.css"> <!-- Stylessheet = feuille contenant les styles -->  
+</head>
+<body>
+
+  <h1>Liste des pays</h1>
+
+  <table id="countriesTable">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Code ISO3</th>
+        <th>Drapeau</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Les lignes du tableau seront ajoutées ici via JavaScript -->
+    </tbody>
+  </table>
+
+  <script>
+    // Charger le fichier JSON local (ici, data.json)
+    fetch('data.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Erreur lors du chargement du fichier JSON");
+        }
+        return response.json();
+      })
+      .then(data => {
+        const tbody = document.querySelector('#countriesTable tbody');
+
+        // Parcourir tous les pays obtenus
+        data.forEach(country => {
+          const row = document.createElement('tr');
+
+          // Créer une cellule pour le nom du pays
+          const nameCell = document.createElement('td');
+          // Selon la structure du JSON, le nom se trouve dans country.name.common
+          nameCell.textContent = country.name && country.name.common ? country.name.common : "N/A";
+
+          // Création de la cellule pour le code ISO (ici le code ISO-A3 : cca3)
+          const isoCell = document.createElement('td');
+          isoCell.textContent = country.cca3 || "N/A";
+
+          // Création de la cellule pour le drapeau
+          const flagCell = document.createElement('td');
+          if (country.flags && country.flags.png) {
+            const flagImg = document.createElement('img');
+            flagImg.src = country.flags.png;  // L'URL de l'image
+            flagImg.alt = `${country.name.common} Flag`;
+            flagCell.appendChild(flagImg);
+          } else {
+            flagCell.textContent = "N/A";
+          }
+
+          // Ajouter les cellules à la ligne
+          row.appendChild(nameCell);
+          row.appendChild(isoCell);
+          row.appendChild(flagCell);
+
+          // Ajouter la ligne au corps du tableau
+          tbody.appendChild(row);
+        });
+      })
+      .catch(error => {
+        console.error("Erreur lors du chargement ou du traitement du JSON :", error);
+      });
+  </script>
+
+</body>
+</html>
